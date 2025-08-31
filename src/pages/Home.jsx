@@ -23,7 +23,7 @@ const Home = () => {
       <StatsSection />
       <Projects />
       <CustomerReviews />
-      <Team />
+      {/* <Team /> */}
       <About />
       <ContactForm />
       <Footer />
