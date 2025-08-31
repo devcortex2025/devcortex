@@ -86,13 +86,34 @@ npm run build
 
 To update your deployed site, simply push changes to the main branch. The GitHub Actions workflow will automatically rebuild and redeploy your site.
 
-## Custom Domain (Optional)
+## Custom Domain Setup (devcortex.in)
 
-To use a custom domain:
+The project is now configured for the custom domain `devcortex.in`:
 
-1. Add a `CNAME` file to the `public/` directory with your domain name
-2. Configure your domain's DNS to point to GitHub Pages
-3. Update the base path in `vite.config.ts` to `/` if using a custom domain
+### DNS Configuration Required:
+1. **A Records** (for apex domain `devcortex.in`):
+   ```
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+   ```
+
+2. **CNAME Record** (for www subdomain):
+   ```
+   www.devcortex.in → YOUR_USERNAME.github.io
+   ```
+
+### GitHub Settings:
+1. Go to your repository → Settings → Pages
+2. Under "Custom domain", enter: `devcortex.in`
+3. Check "Enforce HTTPS" (recommended)
+
+### What's Already Configured:
+- ✅ `CNAME` file created with `devcortex.in`
+- ✅ Base path set to `/` for root domain hosting
+- ✅ SPA routing configured for custom domain
+- ✅ 404.html optimized for root domain
 
 ## Performance Optimization
 
