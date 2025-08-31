@@ -1,0 +1,81 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 80px;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #6366f1 100%);
+}
+
+/* Canvas background styling */
+.hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Hero content overlay */
+.hero-content-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-right: var(--spacing-3xl);
+}
+
+.hero-text-right {
+  text-align: right;
+  max-width: 800px;
+}
+
+.hero-main-text {
+  font-size: 6rem;
+  color: var(--color-text-dark);
+  font-family: 'Abril Fatface', serif;
+  font-weight: 400;
+  line-height: 0.9;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-container {
+    justify-content: center;
+    padding-right: 0;
+  }
+  
+  .hero-text-right {
+    text-align: center;
+  }
+  
+  .hero-main-text {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-main-text {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-main-text {
+    font-size: 3rem;
+  }
+}
