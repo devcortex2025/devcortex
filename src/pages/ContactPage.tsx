@@ -6,27 +6,27 @@ import { MapPin, Clock, Globe, Phone } from 'lucide-react';
 export function ContactPage() {
   const offices = [
     {
-      city: 'San Francisco',
-      address: '123 Tech Street, Suite 100\nSan Francisco, CA 94105',
-      phone: '+1 (555) 123-4567',
-      email: 'sf@devcortex.com',
-      timezone: 'PST (UTC-8)',
+      city: 'India',
+      address: 'DevCortex Headquarters\nIndia',
+      phone: '+91 76206 90141',
+      email: 'info@devcortex.in',
+      timezone: 'IST (UTC+5:30)',
       isHeadquarters: true
     },
     {
-      city: 'New York',
-      address: '456 Innovation Ave, Floor 15\nNew York, NY 10001',
-      phone: '+1 (555) 234-5678',
-      email: 'ny@devcortex.com',
-      timezone: 'EST (UTC-5)',
+      city: 'Global',
+      address: 'Remote Services\nWorldwide Coverage',
+      phone: '+91 76206 90141',
+      email: 'info@devcortex.in',
+      timezone: 'All Time Zones',
       isHeadquarters: false
     },
     {
-      city: 'London',
-      address: '789 Digital Lane\nLondon, UK EC2A 4DP',
-      phone: '+44 20 7123 4567',
-      email: 'london@devcortex.com',
-      timezone: 'GMT (UTC+0)',
+      city: 'Contact Person',
+      address: 'Ashutosh Gupta\nFounder & Lead Developer',
+      phone: '+91 76206 90141',
+      email: 'info@devcortex.in',
+      timezone: 'IST (UTC+5:30)',
       isHeadquarters: false
     }
   ];

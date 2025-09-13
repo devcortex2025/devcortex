@@ -22,16 +22,16 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-3">
               <img 
                 src="/images/logo.svg" 
                 alt="DevCortex Logo" 
-                className="w-8 h-8"
+                className="w-12 h-12"
                 onError={(e) => {
                   e.currentTarget.src = "/images/logo.png";
                 }}
               />
-              <span className="text-xl font-semibold text-gray-900">
+              <span className="text-2xl font-semibold text-gray-900">
                 Dev<span className="text-blue-500">Cortex</span>
               </span>
             </Link>

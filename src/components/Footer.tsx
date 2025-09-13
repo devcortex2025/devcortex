@@ -41,16 +41,16 @@ export function Footer() {
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
+            <div className="flex items-center space-x-3 mb-6">
               <img 
                 src="/images/logo.svg" 
                 alt="DevCortex Logo" 
-                className="w-8 h-8 filter brightness-0 invert"
+                className="w-10 h-10 filter brightness-0 invert"
                 onError={(e) => {
                   e.currentTarget.src = "/images/logo.png";
                 }}
               />
-              <span className="text-xl font-semibold">
+              <span className="text-2xl font-semibold">
                 Dev<span className="text-blue-400">Cortex</span>
               </span>
             </div>

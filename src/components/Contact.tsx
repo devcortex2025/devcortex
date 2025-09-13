@@ -9,20 +9,20 @@ export function Contact() {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'hello@devcortex.com',
-      action: 'mailto:hello@devcortex.com'
+      details: 'info@devcortex.in',
+      action: 'mailto:info@devcortex.in'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      action: 'tel:+15551234567'
+      details: '+91 76206 90141',
+      action: 'tel:+917620690141'
     },
     {
       icon: MapPin,
-      title: 'Visit Us',
-      details: 'San Francisco, CA',
-      action: '#'
+      title: 'Contact Person',
+      details: 'Ashutosh Gupta',
+      action: 'mailto:info@devcortex.in'
     }
   ];
 
