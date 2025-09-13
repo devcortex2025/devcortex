@@ -56,9 +56,11 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <Button className="bg-blue-500 hover:bg-blue-600 text-white">
-              Get a Quote
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-blue-500 hover:bg-blue-600 text-white transition-all duration-300 hover:shadow-lg hover:scale-105">
+                Get a Quote
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -91,9 +93,11 @@ export function Header() {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white">
-                  Get a Quote
-                </Button>
+                <Link to="/contact" className="block">
+                  <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white transition-all duration-300">
+                    Get a Quote
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

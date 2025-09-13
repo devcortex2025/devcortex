@@ -1,6 +1,7 @@
 import { Button } from './ui/button';
 import { ArrowRight, Play } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Link } from 'react-router-dom';
 
 export function Hero() {
   return (
@@ -10,11 +11,13 @@ export function Hero() {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Dev<span className="text-blue-500">Cortex</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 animate-gradient-x bg-300%">
+                  DevCortex
+                </span>
               </h1>
-              <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-400"></div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">
+              <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 animate-pulse"></div>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 animate-gradient-x bg-300%">
                 Transforming Ideas into Digital Reality
               </h2>
             </div>
@@ -24,21 +27,25 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg group"
-              >
-                Get a Free Consultation
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 rounded-lg group"
-              >
-                <Play className="mr-2 w-4 h-4" />
-                View Our Portfolio
-              </Button>
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg group transition-all duration-300 hover:shadow-lg hover:scale-105"
+                >
+                  Get a Free Consultation
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link to="/portfolio">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 rounded-lg group transition-all duration-300 hover:shadow-lg hover:scale-105"
+                >
+                  <Play className="mr-2 w-4 h-4 group-hover:scale-110 transition-transform" />
+                  View Our Portfolio
+                </Button>
+              </Link>
             </div>
 
             {/* Stats */}
