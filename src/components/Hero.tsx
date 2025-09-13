@@ -11,12 +11,10 @@ export function Hero() {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 animate-gradient-x bg-300%">
-                  DevCortex
-                </span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                Dev<span className="text-blue-500">Cortex</span>
               </h1>
-              <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 animate-pulse"></div>
+              <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-400"></div>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 animate-gradient-x bg-300%">
                 Transforming Ideas into Digital Reality
               </h2>
