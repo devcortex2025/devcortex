@@ -1,37 +1,38 @@
 import { Linkedin, Twitter, Github, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     Services: [
-      'Software Consulting',
-      'Cloud & DevOps',
-      'AI & Data Solutions',
-      'Product Development',
-      'Technology Modernization'
+      { name: 'Software Consulting', href: '/services' },
+      { name: 'Cloud & DevOps', href: '/services' },
+      { name: 'AI & Data Solutions', href: '/services' },
+      { name: 'Product Development', href: '/services' },
+      { name: 'Technology Modernization', href: '/services' }
     ],
     Company: [
-      'About Us',
-      'Our Team',
-      'Careers',
-      'Blog',
-      'Contact'
+      { name: 'About Us', href: '/about' },
+      { name: 'Our Team', href: '/about' },
+      { name: 'Careers', href: '/contact' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Contact', href: '/contact' }
     ],
     Resources: [
-      'Case Studies',
-      'White Papers',
-      'Documentation',
-      'Support',
-      'Privacy Policy'
+      { name: 'Case Studies', href: '/portfolio' },
+      { name: 'White Papers', href: '/blog' },
+      { name: 'Documentation', href: '/services' },
+      { name: 'Support', href: '/contact' },
+      { name: 'Privacy Policy', href: '/privacy' }
     ]
   };
 
   const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Mail, href: 'mailto:hello@devcortex.com', label: 'Email' }
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/devcortex', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://twitter.com/devcortex', label: 'Twitter' },
+    { icon: Github, href: 'https://github.com/devcortex2025', label: 'GitHub' },
+    { icon: Mail, href: 'mailto:hello@devcortex.in', label: 'Email' }
   ];
 
   return (
@@ -63,6 +64,8 @@ export function Footer() {
                   <a
                     key={index}
                     href={social.href}
+                    target={social.href.startsWith('mailto:') ? '_self' : '_blank'}
+                    rel={social.href.startsWith('mailto:') ? '' : 'noopener noreferrer'}
                     aria-label={social.label}
                     className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-200"
                   >
@@ -80,12 +83,12 @@ export function Footer() {
               <ul className="space-y-2">
                 {links.map((link, index) => (
                   <li key={index}>
-                    <a
-                      href="#"
+                    <Link
+                      to={link.href}
                       className="text-gray-400 hover:text-white transition-colors duration-200"
                     >
-                      {link}
-                    </a>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -100,15 +103,15 @@ export function Footer() {
               © {currentYear} DevCortex. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              </Link>
+              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              </Link>
+              <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>
