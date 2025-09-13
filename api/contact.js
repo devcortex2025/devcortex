@@ -11,10 +11,12 @@ const corsOptions = {
 // SMTP Configuration
 const createTransporter = () => {
   return nodemailer.createTransporter({
-    service: 'gmail', // You can change this to your preferred email service
+    host: process.env.SMTP_HOST || 'smtp.gmail.com',
+    port: process.env.SMTP_PORT || 587,
+    secure: false, // true for 465, false for other ports
     auth: {
-      user: process.env.SMTP_USER || 'your-email@gmail.com',
-      pass: process.env.SMTP_PASS || 'your-app-password'
+      user: process.env.SMTP_USER || 'your-email@domain.com',
+      pass: process.env.SMTP_PASS || 'your-password'
     }
   });
 };
@@ -58,8 +60,8 @@ const handler = async (req, res) => {
 
     // Email content
     const mailOptions = {
-      from: process.env.SMTP_USER || 'your-email@gmail.com',
-      to: 'info@devcortex.in', // Your business email
+      from: process.env.SMTP_USER || 'your-email@domain.com',
+      to: process.env.SMTP_USER || 'info@devcortex.in', // Your business email
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
