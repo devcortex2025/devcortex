@@ -90,7 +90,8 @@ export function AboutPage() {
           </h1>
           <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Learn more about our company, our team, and the values that drive us to deliver exceptional results.
+            Learn more about our company, our team, and the values that drive us
+            to deliver exceptional results.
           </p>
         </div>
 
@@ -99,15 +100,24 @@ export function AboutPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Story</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Founded in 2019, DevCortex emerged from a simple yet powerful vision: to bridge the gap between innovative ideas and scalable digital solutions. Our team of experienced developers, designers, and strategists came together with a shared passion for transforming businesses through technology.
+              Founded in 2019, DevCortex emerged from a simple yet powerful
+              vision: to bridge the gap between innovative ideas and scalable
+              digital solutions. Our team of experienced developers, designers,
+              and strategists came together with a shared passion for
+              transforming businesses through technology.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What We Do</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                What We Do
+              </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                We specialize in end-to-end digital transformation, helping businesses leverage cutting-edge technologies to achieve their goals. From initial consultation to final deployment and ongoing support, we're your trusted technology partner.
+                We specialize in end-to-end digital transformation, helping
+                businesses leverage cutting-edge technologies to achieve their
+                goals. From initial consultation to final deployment and ongoing
+                support, we're your trusted technology partner.
               </p>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-center">
@@ -129,21 +139,27 @@ export function AboutPage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Mission</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Our Mission
+              </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                To empower businesses with innovative technology solutions that drive growth, efficiency, and competitive advantage in an increasingly digital world.
+                To empower businesses with innovative technology solutions that
+                drive growth, efficiency, and competitive advantage in an
+                increasingly digital world.
               </p>
               <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6">
-                <h4 className="font-semibold text-gray-900 mb-3">Our Commitment</h4>
+                <h4 className="font-semibold text-gray-900 mb-3">
+                  Our Commitment
+                </h4>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  We believe in building long-term partnerships with our clients, delivering solutions that not only meet today's needs but also scale for tomorrow's opportunities.
+                  We believe in building long-term partnerships with our
+                  clients, delivering solutions that not only meet today's needs
+                  but also scale for tomorrow's opportunities.
                 </p>
               </div>
             </div>
           </div>
         </div>
-
-
 
         {/* Stats */}
         <div className="py-16 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl my-16">
@@ -156,7 +172,9 @@ export function AboutPage() {
                     <Icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-gray-900">{stat.value}</div>
+                    <div className="text-3xl font-bold text-gray-900">
+                      {stat.value}
+                    </div>
                     <div className="text-gray-600">{stat.label}</div>
                   </div>
                 </div>
@@ -168,7 +186,9 @@ export function AboutPage() {
         {/* Our Values */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Our Values
+            </h2>
             <p className="text-lg text-gray-600">
               The principles that guide everything we do at DevCortex.
             </p>
@@ -176,12 +196,21 @@ export function AboutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="border-0 shadow-lg bg-white text-center group hover:shadow-xl transition-shadow">
+              <Card
+                key={index}
+                className="border-0 shadow-lg bg-white text-center group hover:shadow-xl transition-shadow"
+              >
                 <CardHeader>
-                  <div className={`w-16 h-16 bg-gradient-to-r ${value.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <span className="text-white font-bold text-xl">{value.title[0]}</span>
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${value.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <span className="text-white font-bold text-xl">
+                      {value.title[0]}
+                    </span>
                   </div>
-                  <CardTitle className="text-xl text-gray-900">{value.title}</CardTitle>
+                  <CardTitle className="text-xl text-gray-900">
+                    {value.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-gray-600 leading-relaxed">
@@ -193,7 +222,7 @@ export function AboutPage() {
           </div>
         </div>
 
-        {/* Our Team */}
+        {/* Our Team 
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
@@ -234,14 +263,16 @@ export function AboutPage() {
             ))}
           </div>
         </div>
-
+          */}
         {/* Career Section */}
         <div className="text-center bg-gradient-to-br from-blue-50 via-cyan-50 to-purple-50 rounded-3xl p-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
             Join Our Team
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals who share our passion for technology and innovation. Explore career opportunities at DevCortex.
+            We're always looking for talented individuals who share our passion
+            for technology and innovation. Explore career opportunities at
+            DevCortex.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-colors">
